@@ -1,0 +1,2 @@
+r(StudentId, StudentName, GroupId) :- Marks(StudentId, :CourseId, :Mark),
+                                      Students(StudentId, StudentName, GroupId).

@@ -1,0 +1,8 @@
+Students(1, 'Иванов И.И.', 1).
+Students(2, 'Петров П.П'., 1).
+
+
+r(StudentId, StudentName, GroupId) :-
+  Students(StudentId, StudentName, GroupId),
+  StudentName = :StudentName.
+

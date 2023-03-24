@@ -1,0 +1,7 @@
+p(StudentId, CourseId) :- Marks(StudentId, CourseId, _).
+q(GroupId, CourseId) :- Students(StudentId, _, GroupId),
+                        Courses(CourseId, _),
+                        ¬ p(StudentId, CourseId).
+r(GroupId, CourseId) :- Groups(GroupId, _),
+                        Courses(CourseId, _),
+                        ¬ q(GroupId, CourseId).

@@ -1,0 +1,7 @@
+π{StudentId}
+  (σ{StudentId = StudentIdDuplicate}
+    (π{StudentId, CourseId}(Marks) gdiv
+    π{StudentIdDuplicate, CourseId}
+      (r{StudentIdDuplicate = StudentId}
+        (σ{LecturerName = :LecturerName}
+          (Plan ⋈ Lecturers ⋈ Students)))))

@@ -1,0 +1,6 @@
+q(ContestId, Letter) :-
+  Runs(_, SessionId, Letter, _, 1),
+  Sessions(SessionId, _, ContestId, _).
+r(ContestId, Letter) :-
+  Problems(ContestId, Letter, _),
+  not q(ContestId, Letter).
